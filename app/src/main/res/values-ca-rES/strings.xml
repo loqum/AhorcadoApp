@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Penjat</string>
+    <string name="button_text">Intentar</string>
+    <string name="texto_contador">Errors:</string>
+    <string name="texto_input">"Introdueix una lletra: "</string>
+</resources>

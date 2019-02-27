@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hanged</string>
+    <string name="button_text">Try</string>
+    <string name="texto_contador">Errors:</string>
+    <string name="texto_input">Introduce a letter:</string>
+</resources>

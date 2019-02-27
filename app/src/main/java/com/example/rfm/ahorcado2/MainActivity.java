@@ -15,23 +15,27 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button buttonIntentar = (Button) findViewById(R.id.buttonJugar);
-        final TextView textPalabra = (TextView) findViewById(R.id.labelPalabraSecreta);
-        final EditText textInput = (EditText) findViewById(R.id.inputRespuesta);
+        final TextView labelPalabraSecreta = (TextView) findViewById(R.id.labelPalabraSecreta);
+        final EditText inputRespuesta = (EditText) findViewById(R.id.inputRespuesta);
 
-        String palabraSecreta = "Arbol";
+        final String palabraSecreta = "Arbol";
+        final String interrogante = new String(new char[palabraSecreta.length()]).replace("\0", "?");
 
         final String[] letra = palabraSecreta.split("");
 
-        textPalabra.setText(palabraSecreta.replaceAll("([A-Z,a-z])", "?"));
+        labelPalabraSecreta.setText(palabraSecreta.replaceAll("([A-Z,a-z])", "?"));
 
         buttonIntentar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Utils.isCorrectLetter(textInput.getText().toString(), letra[0])) {
-                    textPalabra.setText("Correcto");
-                } else {
-                    textPalabra.setText("Incorrecto");
+                for (int i = 1; i < letra.length; i ++) {
+                    if (letra[i].equalsIgnoreCase(inputRespuesta.getText().toString())) {
+                        labelPalabraSecreta.setText(letra[i].concat(new String(new char[palabraSecreta.length() - i]).replace("\0", "?")));
+                    } else {
+                        labelPalabraSecreta.setText(interrogante);
+                    }
                 }
+
             }
         });
     }

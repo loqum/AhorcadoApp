@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ahorcado</string>
+    <string name="button_text">Intentar</string>
+    <string name="texto_contador">Errores:</string>
+    <string name="texto_input">"Introduce una letra: "</string>
+</resources>
