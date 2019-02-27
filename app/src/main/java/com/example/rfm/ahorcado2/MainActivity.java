@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         final String[] letra = palabraSecreta.split("");
 
+        textPalabra.setText(palabraSecreta.replaceAll("([A-Z,a-z])", "?"));
 
         buttonIntentar.setOnClickListener(new View.OnClickListener() {
             @Override
