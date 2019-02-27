@@ -14,7 +14,6 @@
         android:layout_marginTop="200dp"
         android:layout_marginEnd="100dp"
         android:layout_marginBottom="500dp"
-        android:textAlignment="center"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,28 +28,19 @@
         android:layout_marginTop="100dp"
         android:layout_marginEnd="100dp"
         android:layout_marginBottom="350dp"
-        android:autofillHints="true"
-        android:inputType=""
-        android:maxLength="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/labelPalabraSecreta" />
+        app:layout_constraintTop_toBottomOf="@+id/labelPalabraSecreta"
+        android:inputType=""
+        android:autofillHints="true" />
 
     <Button
-        android:id="@+id/buttonJugar"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        android:background="@drawable/buttonshape"
-        android:shadowColor="#2E1919"
-        android:shadowDx="0"
-        android:shadowDy="0"
-        android:shadowRadius="5"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
+        android:layout_marginStart="150dp"
         android:layout_marginTop="100dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginEnd="150dp"
         android:layout_marginBottom="236dp"
         android:text="@string/button_text"
 
@@ -60,21 +50,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputRespuesta"
         app:layout_constraintVertical_bias="0.562" />
-
-    <TextView
-        android:id="@+id/labelContador"
-        android:layout_width="123dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="150dp"
-        android:layout_marginBottom="150dp"
-        android:text="@string/texto_contador"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonJugar" />
 
 
 </android.support.constraint.ConstraintLayout>
