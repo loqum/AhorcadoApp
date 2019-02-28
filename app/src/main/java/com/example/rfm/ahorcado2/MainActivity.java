@@ -1,5 +1,6 @@
 package com.example.rfm.ahorcado2;
 
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -7,6 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import static com.example.rfm.ahorcado2.R.string.texto_contador;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 if (Utils.isValidLetter(inputRespuesta.getText().toString()) && inputRespuesta.getText().toString() != null) {
 
                     if (palabraSecreta.contains(inputRespuesta.getText().toString().toLowerCase())) {
+
                         isCorrect = true;
                         labelPalabraSecreta.setText(palabraSecreta.replaceAll("[^" + inputRespuesta.getText().toString().toLowerCase() + "]", "?"));
                         inputRespuesta.setText("");
@@ -49,14 +53,10 @@ public class MainActivity extends AppCompatActivity {
                     } else {
 
                         isCorrect = false;
-
-                        if (isCorrect == false) {
-
-                            labelPalabraSecreta.setText(palabraSecreta.replaceAll("([A-Za-z])", "?"));
-                            labelContador.setText(getString(R.string.texto_contador) + " " + (++contador) + "\n" + getString(R.string.texto_resultado_incorrecto) + inputRespuesta.getText().toString().toLowerCase());
-                            Toast.makeText(getBaseContext(), "Letra incorrecta", Toast.LENGTH_SHORT).show();
-                            inputRespuesta.setText("");
-                        }
+                        labelPalabraSecreta.setText(palabraSecreta.replaceAll("([A-Za-z])", "?"));
+                        labelContador.setText(getString(texto_contador, ++contador));
+                        Toast.makeText(getBaseContext(), "Letra incorrecta", Toast.LENGTH_SHORT).show();
+                        inputRespuesta.setText("");
 
 
                     }

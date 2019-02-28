@@ -2,7 +2,6 @@
 <resources>
     <string name="app_name">Penjat</string>
     <string name="button_text">Intentar</string>
-    <string name="texto_contador">Errors:</string>
+    <string name="texto_contador">Errors: %1$d</string>
     <string name="texto_input">"Introdueix una lletra: "</string>
-    <string name="texto_resultado_incorrecto">"Ja has introduït: "</string>
 </resources>
