@@ -1,6 +1,5 @@
 package com.example.rfm.ahorcado2;
 
-import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText inputRespuesta;
     private String palabraSecreta;
     private String interrogante;
-    private int contador = 0;
+    private int contadorErrores = 0;
     private boolean isCorrect;
 
     @Override
@@ -54,14 +53,14 @@ public class MainActivity extends AppCompatActivity {
 
                         isCorrect = false;
                         labelPalabraSecreta.setText(palabraSecreta.replaceAll("([A-Za-z])", "?"));
-                        labelContador.setText(getString(texto_contador, ++contador));
+                        labelContador.setText(getString(texto_contador, ++contadorErrores));
                         Toast.makeText(getBaseContext(), "Letra incorrecta", Toast.LENGTH_SHORT).show();
                         inputRespuesta.setText("");
 
-
                     }
+                } else {
+                    Toast.makeText(getBaseContext(), "Debes introducir una letra", Toast.LENGTH_LONG);
                 }
-
 
             }
         });
