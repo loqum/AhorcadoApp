@@ -3,4 +3,5 @@
     <string name="button_text">Intentar</string>
     <string name="texto_contador">Errores: %1$d</string>
     <string name="texto_input">Introduce una letra: </string>
+    <string name="INTENTOS_FILE_NAME" translatable="false">intentos</string>
 </resources>

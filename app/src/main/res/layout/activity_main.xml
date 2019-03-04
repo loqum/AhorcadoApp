@@ -56,7 +56,6 @@
         android:text="@string/button_text"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
-        android:onClick="onClickIntentar"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
